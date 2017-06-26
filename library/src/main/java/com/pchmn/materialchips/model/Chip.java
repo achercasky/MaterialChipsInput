@@ -51,6 +51,10 @@ public class Chip implements ChipInterface {
         this.info = info;
     }
 
+    public Chip(@NonNull String label) {
+        this.label = label;
+    }
+
     @Override
     public Object getId() {
         return id;

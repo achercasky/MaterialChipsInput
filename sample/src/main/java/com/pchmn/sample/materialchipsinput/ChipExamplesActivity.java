@@ -92,10 +92,12 @@ public class ChipExamplesActivity extends AppCompatActivity {
 
         ChipView chipView2 = new ChipView(this);
         chipView2.setLabel("Test 1");
-        chipView2.setChipBackgroundColor(ContextCompat.getColor(this, R.color.colorAccent));
-        chipView2.setLabelColor(ContextCompat.getColor(this, R.color.colorPrimary));
-        chipView2.setAvatarIcon(uri);
-        chipView2.setDeleteIconColor(ContextCompat.getColor(this, R.color.colorPrimary));
+        chipView2.setLabelColor(ContextCompat.getColor(this, R.color.colorAccent));
+//        chipView2.setChipBackgroundColor(ContextCompat.getColor(this, R.color.colorAccent));
+//        chipView2.setLabelColor(ContextCompat.getColor(this, R.color.colorPrimary));
+////        chipView2.setAvatarIcon(uri);
+//        chipView2.setDeleteIconColor(ContextCompat.getColor(this, R.color.colorPrimary));
+        chipView2.showJustText();
 
         mLayout.addView(chipView1);
         mLayout.addView(chipView2);

@@ -150,6 +150,12 @@ public class ChipsInput extends ScrollViewMaxHeight {
         activity.getWindow().setCallback(new MyWindowCallback(mCallBack, activity));
     }
 
+    public void addChip(String label) {
+        ChipInterface chip = new Chip(label);
+
+        mChipsAdapter.addChip(chip);
+    }
+
     public void addChip(ChipInterface chip) {
         mChipsAdapter.addChip(chip);
     }

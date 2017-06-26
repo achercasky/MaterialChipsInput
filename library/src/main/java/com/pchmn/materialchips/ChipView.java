@@ -36,6 +36,7 @@ public class ChipView extends RelativeLayout {
     @BindView(R2.id.icon) CircleImageView mAvatarIconImageView;
     @BindView(R2.id.label) TextView mLabelTextView;
     @BindView(R2.id.delete_button) ImageButton mDeleteButton;
+    @BindView(R2.id.container) RelativeLayout container;
     // attributes
     private static final int NONE = -1;
     private String mLabel;
@@ -217,6 +218,21 @@ public class ChipView extends RelativeLayout {
                 mAvatarIconImageView.setImageBitmap(mLetterTileProvider.getLetterTile(getLabel()));
         }
     }
+
+    public void hideAvatarIcon() {
+        mAvatarIconImageView.setVisibility(View.GONE);
+    }
+
+    /**
+     * Show just the text without image or background.
+     */
+    public void showJustText(){
+        mAvatarIconImageView.setVisibility(View.GONE);
+        mDeleteButton.setVisibility(View.GONE);
+        mContentLayout.setBackgroundColor(ContextCompat.getColor(getContext(), android.R.color.transparent));
+        container.setBackgroundColor(ContextCompat.getColor(getContext(), android.R.color.transparent));
+    }
+
 
     /**
      * Set avatar icon
