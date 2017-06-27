@@ -196,8 +196,8 @@ public class ChipView extends RelativeLayout {
             // adjust padding
             if(mDeleteButton.getVisibility() == VISIBLE)
                 mLabelTextView.setPadding(ViewUtil.dpToPx(12), 0, 0, 0);
-            else
-                mLabelTextView.setPadding(ViewUtil.dpToPx(12), 0, ViewUtil.dpToPx(12), 0);
+//            else
+//                mLabelTextView.setPadding(ViewUtil.dpToPx(12), 0, ViewUtil.dpToPx(12), 0);
 
         }
         else {
@@ -206,16 +206,16 @@ public class ChipView extends RelativeLayout {
             // adjust padding
             if(mDeleteButton.getVisibility() == VISIBLE)
                 mLabelTextView.setPadding(ViewUtil.dpToPx(8), 0, 0, 0);
-            else
-                mLabelTextView.setPadding(ViewUtil.dpToPx(8), 0, ViewUtil.dpToPx(12), 0);
+//            else
+//                mLabelTextView.setPadding(ViewUtil.dpToPx(8), 0, ViewUtil.dpToPx(12), 0);
 
             // set icon
-            if(mAvatarIconUri != null)
-                mAvatarIconImageView.setImageURI(mAvatarIconUri);
-            else if(mAvatarIconDrawable != null)
-                mAvatarIconImageView.setImageDrawable(mAvatarIconDrawable);
-            else
-                mAvatarIconImageView.setImageBitmap(mLetterTileProvider.getLetterTile(getLabel()));
+//            if(mAvatarIconUri != null)
+//                mAvatarIconImageView.setImageURI(mAvatarIconUri);
+//            else if(mAvatarIconDrawable != null)
+//                mAvatarIconImageView.setImageDrawable(mAvatarIconDrawable);
+//            else
+//                mAvatarIconImageView.setImageBitmap(mLetterTileProvider.getLetterTile(getLabel()));
         }
     }
 

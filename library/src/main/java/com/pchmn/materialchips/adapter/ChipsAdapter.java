@@ -2,6 +2,7 @@ package com.pchmn.materialchips.adapter;
 
 import android.content.Context;
 import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.InputType;
@@ -44,9 +45,12 @@ public class ChipsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     public ChipsAdapter(Context context, ChipsInput chipsInput, RecyclerView recycler) {
         mContext = context;
         mChipsInput = chipsInput;
+//        mChipsInput.setBackgroundColor(ContextCompat.getColor(context, android.R.color.holo_red_dark));
+//        mChipsInput.setMaxHeight(20);
         mRecycler = recycler;
         mHintLabel = mChipsInput.getHint();
         mEditText = mChipsInput.getEditText();
+        mEditText.setBackgroundColor(ContextCompat.getColor(context, android.R.color.holo_red_dark));
         initEditText();
     }
 
@@ -125,6 +129,7 @@ public class ChipsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
         mEditText.setHint(mHintLabel);
+        mEditText.setPadding(0,0,0,0);
         mEditText.setBackgroundResource(android.R.color.transparent);
         // prevent fullscreen on landscape
         mEditText.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);
@@ -244,25 +249,25 @@ public class ChipsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 ViewUtil.dpToPx(300),
                 ViewUtil.dpToPx(100));
 
-        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+//        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
         layoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
 
         // align left window
         if(coord[0] <= 0) {
             layoutParams.leftMargin = 0;
-            layoutParams.topMargin = coord[1] - ViewUtil.dpToPx(13);
+//            layoutParams.topMargin = coord[1] - ViewUtil.dpToPx(13);
             detailedChipView.alignLeft();
         }
         // align right
         else if(coord[0] + ViewUtil.dpToPx(300) > windowWidth + ViewUtil.dpToPx(13)) {
             layoutParams.leftMargin = windowWidth - ViewUtil.dpToPx(300);
-            layoutParams.topMargin = coord[1] - ViewUtil.dpToPx(13);
+//            layoutParams.topMargin = coord[1] - ViewUtil.dpToPx(13);
             detailedChipView.alignRight();
         }
         // same position as chip
         else {
             layoutParams.leftMargin = coord[0] - ViewUtil.dpToPx(13);
-            layoutParams.topMargin = coord[1] - ViewUtil.dpToPx(13);
+//            layoutParams.topMargin = coord[1] - ViewUtil.dpToPx(13);
         }
 
         // show view

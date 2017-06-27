@@ -205,14 +205,14 @@ public class ChipsInput extends ScrollViewMaxHeight {
         int padding = ViewUtil.dpToPx(4);
         ChipView chipView = new ChipView.Builder(mContext)
                 .labelColor(mChipLabelColor)
-                .hasAvatarIcon(mChipHasAvatarIcon)
-                .deletable(mChipDeletable)
-                .deleteIcon(mChipDeleteIcon)
+//                .hasAvatarIcon(mChipHasAvatarIcon)
+//                .deletable(mChipDeletable)
+//                .deleteIcon(mChipDeleteIcon)
                 .deleteIconColor(mChipDeleteIconColor)
                 .backgroundColor(mChipBackgroundColor)
                 .build();
 
-        chipView.setPadding(padding, padding, padding, padding);
+        chipView.setPadding(padding, 0, padding, 0);
 
         return chipView;
     }
