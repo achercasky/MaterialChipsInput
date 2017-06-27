@@ -50,11 +50,14 @@ public class ContactListActivity extends AppCompatActivity {
                     Toast.makeText(ContactListActivity.this, "Error get contacts, see logs", Toast.LENGTH_LONG).show();
                 });
 
+//        mChipsInput.showJustText();
+
         // chips listener
         mChipsInput.addChipsListener(new ChipsInput.ChipsListener() {
             @Override
             public void onChipAdded(ChipInterface chip, int newSize) {
                 Log.e(TAG, "chip added, " + newSize);
+                mChipsInput.showJustText();
             }
 
             @Override

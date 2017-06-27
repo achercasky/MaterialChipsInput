@@ -202,7 +202,7 @@ public class ChipView extends RelativeLayout {
         }
         else {
             // show icon
-            mAvatarIconImageView.setVisibility(VISIBLE);
+//            mAvatarIconImageView.setVisibility(VISIBLE);
             // adjust padding
             if(mDeleteButton.getVisibility() == VISIBLE)
                 mLabelTextView.setPadding(ViewUtil.dpToPx(8), 0, 0, 0);
