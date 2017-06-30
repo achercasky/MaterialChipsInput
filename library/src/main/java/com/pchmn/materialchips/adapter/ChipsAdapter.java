@@ -311,7 +311,7 @@ public class ChipsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         // remove contact
         mChipList.remove(position);
         // notify listener
-        mChipsInput.onChipRemoved(chip, mChipList.size());
+        mChipsInput.onChipRemoved(chip, position);
         // if 0 chip
         if (mChipList.size() == 0)
             mEditText.setHint(mHintLabel);
