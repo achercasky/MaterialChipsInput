@@ -270,7 +270,7 @@ public class ChipView extends RelativeLayout {
             if(mAvatarIconImageView.getVisibility() == VISIBLE)
                 mLabelTextView.setPadding(ViewUtil.dpToPx(8), 0, ViewUtil.dpToPx(12), 0);
             else
-                mLabelTextView.setPadding(ViewUtil.dpToPx(12), 0, ViewUtil.dpToPx(12), 0);
+                mLabelTextView.setPadding(0, 0, 0, 0); //Entra aca cuando se agregar un chip
         }
         else {
             // show icon
